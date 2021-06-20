@@ -1,4 +1,4 @@
-package rince.aexp.justclass;
+package rince.aexp.earth;
 
 public class Earth {
 
