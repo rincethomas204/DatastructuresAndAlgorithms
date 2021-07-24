@@ -19,7 +19,7 @@ public class LoopsPractice {
             if(startReferenceIndex < 0) break;
             else {
                 if(endReferenceIndex < 0) endReferenceIndex = str.length();
-                System.out.println(str.substring(startReferenceIndex,endReferenceIndex));
+                System.out.println(str.substring(startReferenceIndex+9,endReferenceIndex));
                 startReferenceIndex++;
             }
 
