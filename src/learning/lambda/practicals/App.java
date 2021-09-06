@@ -2,6 +2,7 @@ package learning.lambda.practicals;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class App {
@@ -25,12 +26,21 @@ public class App {
         System.out.println("Print price range cars...");
         getCars(Cars, (c)->c.getPrice()>20000 && c.getPrice() <=50000);
 
+        System.out.println("Print all car, price range & color...");
+        printSomeCars(Cars,(c)->"Price = " + c.getPrice() + ", and Color = " + c.getColor());
+
 
     }
     public static void getCars(List<Car> Cars, Predicate<Car> predicate){
         for(Car c: Cars){
             if(predicate.test(c))
                 c.printCar();
+        }
+    }
+
+    public static void printSomeCars(List<Car> Cars, Function<Car,String > function){
+        for(Car c: Cars){
+            System.out.println(function.apply(c));
         }
     }
 }
